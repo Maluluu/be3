@@ -1,0 +1,13 @@
+{
+    "name": "forcontu_pec",
+    "type": "drupal-module",
+    "description": "Module PEC",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/forcontu_pec",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/forcontu_pec",
+        "source": "http://cgit.drupalcode.org/forcontu_pec",
+    },
+}

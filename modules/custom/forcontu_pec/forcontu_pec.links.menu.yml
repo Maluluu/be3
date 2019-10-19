@@ -1,0 +1,6 @@
+forcontu_pec.forcontu.pec.settings:
+  title: 'Forcontu PEC'
+  route_name: forcontu_pec.forcontu.pec.settings
+  description: 'Forcontu PEC configuration form'
+  parent: system.admin_config_system
+  weight: 99

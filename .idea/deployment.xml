@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Forcontu be3" autoUploadExternalChanges="true" showNewOnTargetInSync="false">
+    <serverData>
+      <paths name="Forcontu be3">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/modules" local="$PROJECT_DIR$/modules" web="/" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

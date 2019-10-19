@@ -1,0 +1,26 @@
+forcontu_pec.forcontu.pec.settings:
+  path: '/admin/config/system/forcontu_pec'
+  defaults:
+    _form: '\Drupal\forcontu_pec\Form\ForcontuPecSettingsForm'
+    _title: 'ForcontuPecSettingsForm'
+  requirements:
+    _permission: forcontu pec settings
+  options:
+    _admin_route: TRUE
+
+forcontu_pec.messages:
+  path: '/admin/structure/forcontu-pec-messages'
+  defaults:
+    _controller: '\Drupal\forcontu_pec\Controller\ForcontuPecController::Simple'
+    _title: 'ForcontuPecController'
+  requirements:
+    _permission: forcontu pec settings
+
+forcontu_pec.delete:
+  path: '/admin/structure/forcontu-pec-messages/delete/{node}'
+  defaults:
+    _form: '\Drupal\forcontu_pec\Form\ForcontuPecDeleteForm'
+    _title: 'Confirm Form'
+  requirements:
+    _permission: forcontu pec settings
+

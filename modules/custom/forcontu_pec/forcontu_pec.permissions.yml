@@ -1,0 +1,7 @@
+forcontu pec settings:
+    title: 'Access settings pec'
+    description: 'Access to Forcontu PEC settings'    
+
+forcontu pec nodes:
+    title: 'Edit nodes pec'
+    description: 'Edit Forcontu PEC values in nodes'

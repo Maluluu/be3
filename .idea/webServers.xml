@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b327b1c5-da39-47b1-b27d-1b61de59158b" name="Forcontu be3" url="http://sftp.training.forcontu.com">
+        <fileTransfer host="sftp.training.forcontu.com" port="2220" rootFolder="/home/manumuno/public_html/be/be3" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2220" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,39 @@
+<?php
+
+/**
+* @file
+* Install, update and uninstall functions for File module.
+*/
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function forcontu_pec_schema() {
+  $schema['forcontu_pec_messages'] = [
+    'description' => 'The description de module',
+    'fields' => [
+      'nid' => [
+        'description' => 'Stores nid',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,        
+      ],
+      'checked' => [
+        'description' => 'Stores checked',
+        'type' => 'int',
+        'length' => 1,
+        'default' => 0,
+      ],      
+      'message' => [
+        'description' => 'Stores message',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['nid'],
+  ];    
+  return $schema;
+}

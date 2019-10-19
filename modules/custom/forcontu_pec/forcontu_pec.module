@@ -1,0 +1,110 @@
+<?php
+
+/**
+ * @file
+ * Contains forcontu_pec.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\ConfigFormBase;
+
+/**
+ * Implements hook_help().
+ */
+function forcontu_pec_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the forcontu_pec module.
+    case 'help.page.forcontu_pec':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module PEC') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function forcontu_pec_theme() {
+  return [
+    'forcontu_pec' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for node_form.
+ */
+function forcontu_pec_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $connection = \Drupal::database();
+  $query = $connection->select('forcontu_pec_messages', 'f')
+    ->fields('f')
+    ->condition('f.nid', $form_state->getFormObject()->getEntity()->Id());
+  $count = $query->countQuery()->execute()->fetchField();
+  $result = $query->execute()->fetchAssoc();
+
+  if ($count) {
+    $checked = $result['checked'];
+    $message = $result['message'];
+  } else {
+    $checked = FALSE;
+    $message = \Drupal::config('forcontu_pec.settings')->get('forcontu_pec_message');
+  }
+  $form['forcontu_pec'] = [
+    '#type' => 'details',
+    '#title' => t('Forcontu PEC'),
+    '#group' => 'advanced',
+    '#weight' => 99,
+    '#access' => (in_array($form_state->getFormObject()->getEntity()->getType(), \Drupal::config('forcontu_pec.settings')->get('forcontu_pec_allowed_types'), TRUE)) && (\Drupal::currentUser()->hasPermission('forcontu pec nodes')),
+    //'#access_callback' => ['\Drupal\forcontu_pec\Form\ForcontuPecSettingsForms','checkAccess'],
+  ];
+  $form['forcontu_pec']['forcontu_pec_message_check'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Activar Mensaje'),
+    '#default_value' => $checked,
+  ];
+  $form['forcontu_pec']['forcontu_pec_message'] = [
+    '#type' => 'textfield',
+    '#title' => t('Mensaje personalizado'),
+    '#default_value' => $message,
+  ];
+  $form['#validate'][] = 'forcontu_pec_form_node_form_validate';
+  $form['actions']['submit']['#submit'][] = 'forcontu_pec_form_node_form_submit';
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_submit() for node_form.
+ */
+function forcontu_pec_form_node_form_submit(array &$from, FormStateInterface $form_state) {
+  $connection = \Drupal::database();
+  $upsert = $connection->upsert('forcontu_pec_messages')
+    ->key('nid')
+    ->fields(['nid', 'checked', 'message'])
+    ->values([
+      'nid' => $form_state->getFormObject()->getEntity()->id(),
+      'checked' => $form_state->getValue('forcontu_pec_message_check'),
+      'message' => $form_state->getValue('forcontu_pec_message'),
+    ])->execute();      
+}
+
+function forcontu_pec_form_node_form_validate(array &$form, FormStateInterface $form_state) {
+    if(strlen($form_state->getValue('forcontu_pec_message')) > 100 || strlen($form_state->getValue('forcontu_pec_message')) < 50 ){
+      $form_state->setErrorByName('forcontu_pec_message', t('The length must be greater than 50 and less than 100'));
+    }
+  }
+  
+/**
+ * Implements hook_form_alter().
+ */
+function forcontu_pec_form_alter(&$form, FormStateInterface $form_state){
+   // dpm($form);
+   // dpm($form_state->getBuildInfo()['base_form_id']);
+  //dpm($form_state->getFormObject()->getEntity()->getTypeId());
+  //dpm(\Drupal::config('forcontu_pec.settings')->get('forcontu_pec_allowed_types'));
+
+}
+

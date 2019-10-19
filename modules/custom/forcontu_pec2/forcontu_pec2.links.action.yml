@@ -1,0 +1,5 @@
+entity.forcontu_pec2_points.add_form:
+  route_name: entity.forcontu_pec2_points.add_form
+  title: 'Add Points'
+  appears_on:
+    - entity.forcontu_pec2_points.collection

@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains forcontu_pec2.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function forcontu_pec2_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the forcontu_pec2 module.
+    case 'help.page.forcontu_pec2':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Actividad Pec 2') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function forcontu_pec2_theme() {
+  return [
+    'forcontu_pec2' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function forcontu_pec2_node_insert(EntityInterface $entity) {
+  //$userId = \Drupal::currentUser()->id();
+  //$entity_user = $entity->getOwnerId();
+  $points = \Drupal::service('plugin.manager.grant_points');
+  $points->createInstance('NodeCreate')->grant($entity);
+}

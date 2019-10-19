@@ -1,0 +1,6 @@
+forcontu_pec_allowed_types:
+  article: articulo
+  page: 0
+  report: 0
+forcontu_pec_message: 'Primer Mensaje'
+forcontu_pec_num_items: 2

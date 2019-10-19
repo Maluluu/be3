@@ -1,0 +1,13 @@
+{
+    "name": "forcontu_pec2",
+    "type": "drupal-module",
+    "description": "Actividad Pec 2",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/forcontu_pec2",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/forcontu_pec2",
+        "source": "http://cgit.drupalcode.org/forcontu_pec2",
+    },
+}

@@ -1,0 +1,13 @@
+# Points menu items definition
+entity.forcontu_pec2_points.collection:
+  title: 'Points list'
+  route_name: entity.forcontu_pec2_points.collection
+  description: 'List Points entities'
+  parent: system.admin_structure
+  weight: 100
+
+forcontu_pec2_points.admin.structure.settings:
+  title: 'Points settings'
+  description: 'Configure Points entities'
+  route_name: forcontu_pec2_points.settings
+  parent: system.admin_structure

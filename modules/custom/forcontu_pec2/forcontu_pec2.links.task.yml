@@ -1,0 +1,21 @@
+# Points routing definition
+forcontu_pec2_points.settings_tab:
+  route_name: forcontu_pec2_points.settings
+  title: 'Settings'
+  base_route: forcontu_pec2_points.settings
+
+entity.forcontu_pec2_points.canonical:
+  route_name: entity.forcontu_pec2_points.canonical
+  base_route: entity.forcontu_pec2_points.canonical
+  title: 'View'
+
+entity.forcontu_pec2_points.edit_form:
+  route_name: entity.forcontu_pec2_points.edit_form
+  base_route: entity.forcontu_pec2_points.canonical
+  title: 'Edit'
+
+entity.forcontu_pec2_points.delete_form:
+  route_name:  entity.forcontu_pec2_points.delete_form
+  base_route:  entity.forcontu_pec2_points.canonical
+  title: Delete
+  weight: 10

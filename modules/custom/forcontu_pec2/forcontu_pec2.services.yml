@@ -1,0 +1,4 @@
+services:
+  plugin.manager.grant_points:
+    class: Drupal\forcontu_pec2\Plugin\GrantPointsManager
+    parent: default_plugin_manager

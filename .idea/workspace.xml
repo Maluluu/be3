@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ba1fd9b-d7f7-43cd-80a2-4f75a1b73648" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9002" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="be3.manumuno.training.forcontu.com" id="7aa0c0b8-c6a6-4ded-afc5-968c8135902f" name="Forcontu" />
+    </servers>
+  </component>
+  <component name="ProjectId" id="1OgTMnYCCXmBqYYEsQRPUJbufBe" />
+  <component name="PropertiesComponent">
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="Forcontu">
+      <method v="2" />
+    </configuration>
+    <configuration name="Be3" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Forcontu">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Forcontu">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="DEPLOYMENT_SERVER" />
+    <option name="myConnectionId" value="b327b1c5-da39-47b1-b27d-1b61de59158b" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ba1fd9b-d7f7-43cd-80a2-4f75a1b73648" name="Default Changelist" comment="" />
+      <created>1564398194040</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564398194040</updated>
+      <workItem from="1564398195168" duration="55000" />
+      <workItem from="1564401146298" duration="5848000" />
+      <workItem from="1564648129501" duration="1645000" />
+      <workItem from="1564657456639" duration="1275000" />
+      <workItem from="1564726944003" duration="1235000" />
+      <workItem from="1565074218242" duration="4390000" />
+      <workItem from="1565084383760" duration="2502000" />
+      <workItem from="1565094129433" duration="66112000" />
+      <workItem from="1565164512642" duration="1527000" />
+      <workItem from="1565285617122" duration="921000" />
+      <workItem from="1565290359463" duration="44000" />
+      <workItem from="1565290757862" duration="140000" />
+      <workItem from="1565291193215" duration="203000" />
+      <workItem from="1565292019059" duration="42000" />
+      <workItem from="1565292204001" duration="86000" />
+      <workItem from="1565592802642" duration="956000" />
+      <workItem from="1568117991042" duration="194000" />
+      <workItem from="1569912953065" duration="3620000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

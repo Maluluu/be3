@@ -1,0 +1,5 @@
+forcontu_pec:
+  forcontu_pec_allowed_types:
+    - Articulo
+  forcontu_pec_num_items: "3"
+  
